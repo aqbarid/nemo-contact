@@ -18,6 +18,7 @@ function dashboard(){
                 echo '<th scope="col" class="manage-column column-tags">Email</th>';
                 echo '<th scope="col" class="manage-column column-tags">Date</th>';
                 echo '<th scope="col" class="manage-column column-tags"></th>';
+                echo "</tr>";
             echo "</thead>";
         foreach($contacts as $contact){
             echo "<tr>";
@@ -25,6 +26,7 @@ function dashboard(){
             echo "<td>".$contact->email."</td>";
             echo "<td>".$contact->date."</td>";
             echo "<td><a href='".admin_url('admin.php?page=delete-contact&id='.$contact->id)."'>Delete</a></td>";
+            echo "</tr>";
         }
             echo "<tfoot>";
                 echo "<tr>";
